@@ -1,0 +1,71 @@
+---
+description: 
+Family Tree SMS/Chat Script – Explanation Document
+Purpose
+
+This document provides a structured script of questions that can be sent to users via SMS or chat. The purpose is to collect detailed information about their background, relatives, and family history so that we can build an in-depth, visual family tree.
+
+How It Works
+
+Intro Message
+
+The user receives a friendly greeting and confirmation if they are ready to answer questions.
+
+They can reply "yes" to begin or "no" to exit.
+
+Input Questions
+
+The script is divided into sections that capture progressively deeper layers of the family tree:
+
+User Information (root of the tree)
+
+Parents
+
+Siblings
+
+Children
+
+Grandparents
+
+Optional Stories/Details
+
+Conditional Logic
+
+If the user says they have siblings, the system will loop through collecting sibling details.
+
+Same for children and additional relatives.
+
+This allows flexible tree-building without overwhelming the user at once.
+
+Closing Message
+
+The user receives a thank-you message and instructions on how to update their tree later (“Update Family”).
+
+Data Collection Format
+
+Each answer can be stored in structured JSON or database fields (e.g., full_name, birth_year, birthplace).
+
+This makes it easy to plug responses into a React Flow visualization or database for relationship mapping.
+
+Example Flow
+
+Bot: Hi! 👋 We’re building your family tree. I’ll ask you a few quick questions… Ready?
+User: Yes
+Bot: What’s your full name?
+User: Sarah Johnson
+Bot: What’s your date of birth?
+User: 05/12/1985
+Bot: What is your mother’s full name, birth year, and birthplace?
+User: Mary Lee, 1960, Chicago
+
+Why This Matters
+
+Creates a consistent data-gathering process for every user.
+
+Ensures responses are structured for easy mapping and visualization.
+
+Allows users to contribute incrementally without feeling overwhelmed.
+
+globs:
+alwaysApply: false
+---
