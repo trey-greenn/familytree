@@ -21,7 +21,7 @@ import Image from 'next/image';
 // Custom node component with thinker.png image
 const FamilyMemberNode = ({ data }: { data: any }) => {
   return (
-    <div className="bg-white dark:bg-amber-900 p-3 rounded-lg shadow-md border-2 border-amber-400 flex flex-col items-center w-[180px]">
+    <div className="bg-white dark:bg-amber-900 p-3 rounded-lg shadow-md border-2 border-amber-400 flex flex-col items-center w-[380px]">
       <div className="relative w-16 h-16 mb-2 overflow-hidden rounded-full border-2 border-amber-500">
         <Image 
           src="/thinker.png" 
@@ -34,6 +34,8 @@ const FamilyMemberNode = ({ data }: { data: any }) => {
         <p className="font-semibold text-amber-800 dark:text-amber-200">{data.name}</p>
         <p className="text-xs text-amber-600 dark:text-amber-300">{data.birthYear} - {data.deathYear || 'Present'}</p>
         <p className="text-xs text-amber-500">{data.relationship}</p>
+        <p className="text-xs text-amber-500">{data.bio}</p>
+
       </div>
     </div>
   );
@@ -54,7 +56,8 @@ export default function FamilyTreeFlow() {
       data: { 
         name: 'James Smith', 
         birthYear: '1950', 
-        relationship: 'Grandfather' 
+        relationship: 'Grandfather' ,
+        bio: 'James Smith was a great grandfather who lived in the United States. He was born in 1950 and died in 2005. He was a great grandfather who lived in the United States. He was born in 1950 and died in 2005. He was a great grandfather who lived in the United States. He was born in 1950 and died in 2005. He was a great grandfather who lived in the United States. He was born in 1950 and died in 2005.'
       },
     },
     {
@@ -64,7 +67,8 @@ export default function FamilyTreeFlow() {
       data: { 
         name: 'Mary Smith', 
         birthYear: '1952', 
-        relationship: 'Grandmother' 
+        relationship: 'Grandmother' ,
+        bio: 'Mary Smith was a great grandmother who lived in the United States. She was born in 1952 and died in 2005. She was a great grandmother who lived in the United States. She was born in 1952 and died in 2005. She was a great grandmother who lived in the United States. She was born in 1952 and died in 2005. She was a great grandmother who lived in the United States. She was born in 1952 and died in 2005.'
       },
     },
     {
@@ -74,7 +78,8 @@ export default function FamilyTreeFlow() {
       data: { 
         name: 'John Smith', 
         birthYear: '1975', 
-        relationship: 'Father' 
+        relationship: 'Father' ,
+        bio: 'John Smith was a great grandfather who lived in the United States. He was born in 1950 and died in 2005. He was a great grandfather who lived in the United States. He was born in 1950 and died in 2005. He was a great grandfather who lived in the United States. He was born in 1950 and died in 2005. He was a great grandfather who lived in the United States. He was born in 1950 and died in 2005.'
       },
     },
     {
@@ -84,7 +89,8 @@ export default function FamilyTreeFlow() {
       data: { 
         name: 'Sarah Johnson', 
         birthYear: '1978', 
-        relationship: 'Mother' 
+        relationship: 'Mother' ,
+        bio: 'Sarah Johnson was a great grandmother who lived in the United States. She was born in 1952 and died in 2005. She was a great grandmother who lived in the United States. She was born in 1952 and died in 2005. She was a great grandmother who lived in the United States. She was born in 1952 and died in 2005. She was a great grandmother who lived in the United States. She was born in 1952 and died in 2005.'
       },
     },
     {
@@ -94,7 +100,8 @@ export default function FamilyTreeFlow() {
       data: { 
         name: 'Michael Smith', 
         birthYear: '2005', 
-        relationship: 'Child' 
+        relationship: 'Child' ,
+        bio: 'Michael Smith was a great grandfather who lived in the United States. He was born in 1950 and died in 2005. He was a great grandfather who lived in the United States. He was born in 1950 and died in 2005. He was a great grandfather who lived in the United States. He was born in 1950 and died in 2005. He was a great grandfather who lived in the United States. He was born in 1950 and died in 2005.'
       },
     },
   ];
